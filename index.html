@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>donFood.</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="carta.html">
+    <link rel="stylesheet" href="main.js">
+</head>
+
+<body>
+    <!--Navegation-->
+    <header class="sticky">
+        <a href="#" class="logo">donFood<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu();">Inicio</a></li>
+            <li><a href="#about" onclick="toggleMenu();">Acerca de Nosotros</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu();">Expertos</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu();">Testimonios</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contacto</a></li>
+            <li><a href="carta.html#carta" onclick="toggleMenu();">Carta</a></li>
+        </ul>
+    </header>
+    <!--Banner-->
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Elige Siempre</h2>
+            <p>Excelentes platos preparados por excelenstes chefs, tenemos una variedad de platos disponibles para tu elección.</p>
+            <a href="#menu" class="btn">Nuestro Menu</a>
+        </div>
+    </section>
+    <!--About-->
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="tittleText"><span>A</span>cerca de Nosotros</h2>
+                <p>Somos un restaurant que buscaba ser distinto a lo que entonces se conocía en Chile: nada muy elegante, pero cuidadosamente decorado, especial cuidado en la música y un ambiente acogedor. Pero eso no es lo unico que nos caracteriza, la
+                    gran estrella aquí es la comida. <br><br> Es por eso que te invitamos a disfrutar de nuestro servicio, brindandote una experiencia única con nuestra comida de primera y nuestros Chefs altamente capacitados.
+
+                </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/pexels-kristina-paukshtite-1146760.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Menu-->
+    <section class="menu" id="menu">
+        <div class="tittle">
+            <h2 class="tittleText">Nuestro <span>M</span>enu</h2>
+            <p>Cada plato tiene su encanto. Aqui estan las especialidades de la casa, los platos especiales cuentan con una personalización de este, pudiendo agregarle ingredientes especiales a tu plato</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/menu1.jpg">
+                </div>
+                <div class="text">
+                    <h3>Ensalada</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/menu2.jpg">
+                </div>
+                <div class="text">
+                    <h3>Sopa</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/menu3.jpg">
+                </div>
+                <div class="text">
+                    <h3>Pasta</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/menu4.jpg">
+                </div>
+                <div class="text">
+                    <h3>Ensalada Especial</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/menu5.jpg">
+                </div>
+                <div class="text">
+                    <h3>Sopa Especial</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/menu6.jpg">
+                </div>
+                <div class="text">
+                    <h3>Pasta Especial</h3>
+                </div>
+            </div>
+            <div class="tittle">
+                <a href="carta.html" class="btn">Ver Todo</a>
+            </div>
+        </div>
+        <!--Expert-->
+        <section class="expert" id="expert">
+            <div class="tittle">
+                <h2 class="tittleText">Nuestros <span>C</span>ocineros</h2>
+                <p>Cocineros de alto reconocimiento por su labor en nuestro restaurant, conocidos por su carimas y talento en el arte de la cocina.</p>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="img/chef1.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Joaquin Ortiz</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="img/chef2.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Sebastian Romero</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="img/chef3.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Ignacio Figueroa</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="img/chef4.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Joaquin Reyes</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--Testimonials-->
+    <section class="testimonials" id="testimonials">
+        <div class="tittle white">
+            <h2 class="tittleText"><span>T</span>estimonios</h2>
+            <p>Testimonios y opiniones de celebridades que nos han visitado.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/testi1.jpg">
+                </div>
+                <div class="text">
+                    <p>Excelente restaurante. Platos deliciosos. Terraza ideal para esta pandemia, cumplen con protocolos. Todo limpio. Cuenta con estacionamiento en su interior. Volveremos!</p>
+                    <h3>Pedro Pascal</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/testi2.jpg">
+                </div>
+                <div class="text">
+                    <p>Segunda vez que lo visito y me parece un muy buen restaurante. Buen servicio y comida muy rica.</p>
+                    <h3>Agusto Schuster</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/testi3.jpg">
+                </div>
+                <div class="text">
+                    <p>Disfrutar en un ambiente relajado y distendido de una oferta de productos de calidad, bien elaborados y perfectamente servidos.</p>
+                    <h3>Diana Bolocco</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/testi4.jpg">
+                </div>
+                <div class="text">
+                    <p>Comida muy rica y buena atención. Probé algunos platos quede satisfecha... Por mi, habría probado toda la carta!</p>
+                    <h3>Claudia Conserva</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact-->
+    <!--Implementar al borde en blanco las aplicaciones de contacto(gmail,whatsapp, facebook, etc.)-->
+    <section class="contact" id="contact">
+        <h2 class="tittleText"><span>C</span>ontactanos</h2>
+        <p>Si tienes dudas o deseas mas información acerca de nuestros servicios e instalaciones, escribenos.</p>
+        <div class="container">
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="username">Nombre</label>
+                    <input type="text" placeholder="Daniel" id="username" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="ejemplo@email.com" id="email" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="comentario">Comentario</label>
+                    <input type="text" placeholder="Comentario" id="comentario" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <button class="btn">Enviar</button>
+            </form>
+        </div>
+        <script src="main.js"></script>
+    </section>
+    <div class="copyrightText">
+        <p>copyright 2022 <a href="#">donFood</a>. All rights reserved </p>
+    </div>
+</body>
+
+</html>
