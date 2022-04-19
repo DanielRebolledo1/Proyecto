@@ -232,7 +232,7 @@
                 </div>
                 <div class="form-control">
                     <label for="comentario">Comentario</label>
-                    <input type="text" placeholder="Comentario" id="comentario" />
+                    <textarea name="comentarios" rows="10" cols="40" placeholder="Comentarios" id="comentario"></textarea>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
@@ -240,11 +240,34 @@
                 <button class="btn">Enviar</button>
             </form>
         </div>
-        <script src="/js/main.js"></script>
     </section>
+    <!-- SOCIAL PANEL HTML -->
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>Redes sociales</h4>
+            <ul>
+                <li>
+                    <a href="https://facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+                Redes sociales
+            </button>
     <div class="copyrightText">
         <p>copyright 2022 <a href="#">donFood</a>. All rights reserved </p>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

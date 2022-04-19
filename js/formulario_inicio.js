@@ -15,11 +15,11 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 
-form.addEventListener('submit', e => {
+$('#form').on('submit', function(e) {
     e.preventDefault();
 
     checkInputs();
-});
+})
 
 function checkInputs() {
     // trim to remove the whitespaces

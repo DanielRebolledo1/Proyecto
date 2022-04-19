@@ -341,7 +341,23 @@ section {
     width: 100%;
 }
 
+.form-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+}
+
 .form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control textarea:focus {
     outline: 0;
     border-color: #777;
 }
@@ -351,6 +367,14 @@ section {
 }
 
 .form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.success textarea {
+    border-color: #2ecc71;
+}
+
+.form-control.error textarea {
     border-color: #e74c3c;
 }
 
@@ -398,11 +422,15 @@ section {
 }
 
 .registro {
+    width: 100%;
+    min-height: 100vh;
     background: url(/img/bg4.jpg);
     background-size: cover;
 }
 
 .inicioSesion {
+    width: 100%;
+    min-height: 100vh;
     background: url(/img/bg4.jpg);
     background-size: cover;
 }
@@ -504,7 +532,7 @@ section {
 
 .social-panel h4 {
     margin: 20px 0;
-    color: #97A5CE;
+    color: #111;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
