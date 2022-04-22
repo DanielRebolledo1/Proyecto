@@ -25,17 +25,20 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
-usuario.addEventListener('input', () => {
+$('#username').on('input', function(e){
+    e.preventDefault();
     checkName();
-});
+})
 
-email.addEventListener('input', () => {
+$('#email').on('input', function(e){
+    e.preventDefault();
     checkEmail();
-});
+})
 
-comentario.addEventListener('input', () => {
+$('#comentario').on('input', function(e){
+    e.preventDefault();
     checkComentario();
-});
+})
 
 function checkName() {
     const usuarioValue = usuario.value.trim();
