@@ -21,14 +21,16 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
-username.addEventListener('input', () => {
+$('#username').on('input', function(e){
+    e.preventDefault();
     checkName();
 });
 
-
-password.addEventListener('input', () => {
+$('#password').on('input', function(e){
+    e.preventDefault();
     checkPassword();
 });
+
 
 function checkName() {
     const usernameValue = username.value.trim();
