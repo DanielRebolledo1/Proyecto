@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <!--Navegation-->
+    <!---------------->
+    <!-- Navegation -->
+    <!---------------->
     <header class="sticky">
         <a href="#" class="logo">donFood<span>.</span></a>
         <div class="menuToggle" onclick="toggleMenu();"></div>
@@ -21,10 +23,12 @@
             <li><a href="#expert" onclick="toggleMenu();">Expertos</a></li>
             <li><a href="#testimonials" onclick="toggleMenu();">Testimonios</a></li>
             <li><a href="#contact" onclick="toggleMenu();">Contacto</a></li>
-            <li><a href="carta.html#carta" onclick="toggleMenu();">Carta</a></li>
+            <li><a href="/formInicioSesion.html" onclick="toggleMenu();">Inicio de Sesión</a></li>
         </ul>
     </header>
-    <!--Banner-->
+    <!---------------->
+    <!---- Banner ---->
+    <!---------------->
     <section class="banner" id="banner">
         <div class="content">
             <h2>Elige Siempre</h2>
@@ -32,7 +36,9 @@
             <a href="#menu" class="btn">Nuestro Menu</a>
         </div>
     </section>
-    <!--About-->
+    <!---------------->
+    <!---- About ---->
+    <!---------------->
     <section class="about" id="about">
         <div class="row">
             <div class="col50">
@@ -49,7 +55,9 @@
             </div>
         </div>
     </section>
-    <!--Menu-->
+    <!---------------->
+    <!----- Menu ----->
+    <!---------------->
     <section class="menu" id="menu">
         <div class="tittle">
             <h2 class="tittleText">Nuestro <span>M</span>enu</h2>
@@ -108,7 +116,9 @@
                 <a href="carta.html" class="btn">Ver Todo</a>
             </div>
         </div>
-        <!--Expert-->
+        <!---------------->
+        <!---- Expert ---->
+        <!---------------->
         <section class="expert" id="expert">
             <div class="tittle">
                 <h2 class="tittleText">Nuestros <span>C</span>ocineros</h2>
@@ -150,7 +160,9 @@
             </div>
         </section>
     </section>
-    <!--Testimonials-->
+    <!------------------>
+    <!-- Testimonials -->
+    <!------------------>
     <section class="testimonials" id="testimonials">
         <div class="tittle white">
             <h2 class="tittleText"><span>T</span>estimonios</h2>
@@ -195,30 +207,32 @@
             </div>
         </div>
     </section>
-    <!--Contact-->
+    <!---------------->
+    <!---- Contact --->
+    <!---------------->
     <!--Implementar al borde en blanco las aplicaciones de contacto(gmail,whatsapp, facebook, etc.)-->
     <section class="contact" id="contact">
-        <h2 class="tittleText"><span>C</span>ontactanos</h2>
+        <h2 class="tittleText"><span>C</span>ontáctanos</h2>
         <p>Si tienes dudas o deseas mas información acerca de nuestros servicios e instalaciones, escribenos.</p>
         <div class="container">
             <form id="form" class="form">
                 <div class="form-control">
                     <label for="username">Nombre</label>
-                    <input type="text" placeholder="Daniel" id="username" />
+                    <input type="text" placeholder="Nombre" id="username" autocomplete="off" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
                     <label for="email">Email</label>
-                    <input type="email" placeholder="ejemplo@email.com" id="email" />
+                    <input type="email" placeholder="ejemplo@email.com" id="email" autocomplete="off" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
                     <label for="comentario">Comentario</label>
-                    <input type="text" placeholder="Comentario" id="comentario" />
+                    <textarea name="comentarios" rows="10" cols="40" placeholder="Comentarios" id="comentario"></textarea>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
@@ -226,11 +240,34 @@
                 <button class="btn">Enviar</button>
             </form>
         </div>
-        <script src="main.js"></script>
     </section>
+    <!-- SOCIAL PANEL HTML -->
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>Redes sociales</h4>
+            <ul>
+                <li>
+                    <a href="https://facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+                Redes sociales
+            </button>
     <div class="copyrightText">
         <p>copyright 2022 <a href="#">donFood</a>. All rights reserved </p>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
