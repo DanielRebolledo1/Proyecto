@@ -295,7 +295,6 @@ section {
 
 .testimonials .content .box .text p {
     color: #666;
-    font-size: italic;
 }
 
 .testimonials .content .box .text h3 {
@@ -753,10 +752,8 @@ section {
         margin: 10px;
         padding: 20px;
     }
-    .contactForm {
-        padding: 35px 40px;
-        margin-top: 20px;
-        margin-bottom: 30px;
+    .container {
+        margin-top: 60px;
     }
     .form {
         padding: 35px 40px;
