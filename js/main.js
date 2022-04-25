@@ -12,7 +12,6 @@ function toggleMenu() {
 }
 
 
-<<<<<<< HEAD
 $.get("api.json",
     function(data) {
         //console.log(data);
@@ -24,8 +23,6 @@ $.get("api.json",
     });
 
 
-=======
->>>>>>> daniel
 //Formulario de contacto
 const form = document.getElementById('form');
 const usuario = document.getElementById('username');
@@ -39,18 +36,17 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
-<<<<<<< HEAD
-$('#username').on('input', function(e){
+$('#username').on('input', function(e) {
     e.preventDefault();
     checkName();
 })
 
-$('#email').on('input', function(e){
+$('#email').on('input', function(e) {
     e.preventDefault();
     checkEmail();
 })
 
-$('#comentario').on('input', function(e){
+$('#comentario').on('input', function(e) {
     e.preventDefault();
     checkComentario();
 })
@@ -84,11 +80,6 @@ function checkComentario() {
     }
 }
 
-=======
-usuario.addEventListener('input', () => {
-    checkName();
-});
->>>>>>> daniel
 
 email.addEventListener('input', () => {
     checkEmail();
@@ -182,8 +173,4 @@ floating_btn.addEventListener('click', () => {
 
 close_btn.addEventListener('click', () => {
     social_panel_container.classList.remove('visible')
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> daniel

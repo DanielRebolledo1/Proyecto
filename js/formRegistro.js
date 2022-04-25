@@ -23,23 +23,22 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
-<<<<<<< HEAD
-$('#username').on('input', function(e){
+$('#username').on('input', function(e) {
     e.preventDefault();
     checkName();
 });
 
-$('#password').on('input', function(e){
+$('#password').on('input', function(e) {
     e.preventDefault();
     checkPassword();
 });
 
-$('#email').on('input', function(e){
+$('#email').on('input', function(e) {
     e.preventDefault();
     checkEmail();
 })
 
-$('#password2').on('input', function(e){
+$('#password2').on('input', function(e) {
     e.preventDefault();
     checkPassword1();
 })
@@ -86,8 +85,6 @@ function checkPassword1() {
 }
 
 
-=======
->>>>>>> daniel
 function checkInputs() {
     // trim to remove the whitespaces
     const usernameValue = username.value.trim();
@@ -151,8 +148,4 @@ floating_btn.addEventListener('click', () => {
 
 close_btn.addEventListener('click', () => {
     social_panel_container.classList.remove('visible')
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> daniel
