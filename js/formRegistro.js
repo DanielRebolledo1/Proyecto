@@ -23,21 +23,25 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
-username.addEventListener('input', () => {
+$('#username').on('input', function(e){
+    e.preventDefault();
     checkName();
 });
 
-email.addEventListener('input', () => {
-    checkEmail();
-});
-
-password.addEventListener('input', () => {
+$('#password').on('input', function(e){
+    e.preventDefault();
     checkPassword();
 });
 
-password2.addEventListener('input', () => {
+$('#email').on('input', function(e){
+    e.preventDefault();
+    checkEmail();
+})
+
+$('#password2').on('input', function(e){
+    e.preventDefault();
     checkPassword1();
-});
+})
 
 function checkName() {
     const usernameValue = username.value.trim();
