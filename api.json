@@ -1,0 +1,39 @@
+{
+    "categories": [{
+            "idCategory": "1",
+            "strCategory": "Lasaña Vegana",
+            "strCategoryThumb": "https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg/preview",
+            "strCategoryDescription": "Esta lasaña vegana está repleta de verduras, sabrosa y cremosa y sin ningún producto de queso vegano procesado o tofu!"
+        },
+        {
+            "idCategory": "2",
+            "strCategory": "Espaguetis a la Carbonara",
+            "strCategoryThumb": "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg/preview",
+            "strCategoryDescription": "Se basa en huevos, queso, aceite de oliva virgen extra, pancetta o guanciale y pimienta negra tocinera"
+        },
+        {
+            "idCategory": "3",
+            "strCategory": "Ensalada de aguacate y salmon ahumado",
+            "strCategoryThumb": "https://www.themealdb.com/images/media/meals/1549542994.jpg/preview",
+            "strCategoryDescription": "una deliciosa ensalada de aguacate y salmón ahumado, ideal como primer plato tanto en los almuerzos como en las cenas."
+        },
+        {
+            "idCategory": "4",
+            "strCategory": "Sopa de guisantes",
+            "strCategoryThumb": "https://www.themealdb.com/images/media/meals/xxtsvx1511814083.jpg/preview",
+            "strCategoryDescription": "una deliciosa y llamativa sopa de guisantes que no solo resulta vistosa a los ojos, sino que también es muy sabrosa y nutritiva para el organismo."
+        },
+        {
+            "idCategory": "5",
+            "strCategory": "Panqueques",
+            "strCategoryThumb": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg/preview",
+            "strCategoryDescription": "Deliciosos panqueques cubiertos de miel, frambuesas y arándanos"
+        },
+        {
+            "idCategory": "6",
+            "strCategory": "Lasaña",
+            "strCategoryThumb": "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg/preview",
+            "strCategoryDescription": "Deliciosa lasaña tradicional"
+        }
+    ]
+}

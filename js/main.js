@@ -12,6 +12,17 @@ function toggleMenu() {
 }
 
 
+$.get("api.json",
+    function(data) {
+        //console.log(data);
+        $.each(data.categories, function(i, item) {
+            $("#categorias").append("<tr><td>" +
+                item.strCategory + "</td> <td> <img src='" + item.strCategoryThumb + "' class= 'img-fluid'> </td> <td>" +
+                item.strCategoryDescription + "</td></tr>");
+        });
+    });
+
+
 //Formulario de contacto
 const form = document.getElementById('form');
 const usuario = document.getElementById('username');
