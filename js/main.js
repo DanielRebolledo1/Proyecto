@@ -12,6 +12,7 @@ function toggleMenu() {
 }
 
 
+<<<<<<< HEAD
 $.get("api.json",
     function(data) {
         //console.log(data);
@@ -23,6 +24,8 @@ $.get("api.json",
     });
 
 
+=======
+>>>>>>> daniel
 //Formulario de contacto
 const form = document.getElementById('form');
 const usuario = document.getElementById('username');
@@ -36,6 +39,7 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
+<<<<<<< HEAD
 $('#username').on('input', function(e){
     e.preventDefault();
     checkName();
@@ -50,6 +54,49 @@ $('#comentario').on('input', function(e){
     e.preventDefault();
     checkComentario();
 })
+
+function checkName() {
+    const usuarioValue = usuario.value.trim();
+    if (usuarioValue === '') {
+        setErrorFor(usuario, 'Debe ingresar un nombre de usuario');
+    } else {
+        setSuccessFor(usuario);
+    }
+}
+
+function checkEmail() {
+    const emailValue = email.value.trim();
+    if (emailValue === '') {
+        setErrorFor(email, 'Debe ingresar un Email');
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, 'No ingreso un email válido');
+    } else {
+        setSuccessFor(email);
+    }
+}
+
+function checkComentario() {
+    const comentarioValue = comentario.value.trim();
+    if (comentarioValue === '') {
+        setErrorFor(comentario, 'Debe ingresar un comentario');
+    } else {
+        setSuccessFor(comentario);
+    }
+}
+
+=======
+usuario.addEventListener('input', () => {
+    checkName();
+});
+>>>>>>> daniel
+
+email.addEventListener('input', () => {
+    checkEmail();
+});
+
+comentario.addEventListener('input', () => {
+    checkComentario();
+});
 
 function checkName() {
     const usuarioValue = usuario.value.trim();
@@ -135,4 +182,8 @@ floating_btn.addEventListener('click', () => {
 
 close_btn.addEventListener('click', () => {
     social_panel_container.classList.remove('visible')
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> daniel

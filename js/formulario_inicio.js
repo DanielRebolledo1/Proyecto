@@ -21,6 +21,7 @@ $('#form').on('submit', function(e) {
     checkInputs();
 })
 
+<<<<<<< HEAD
 $('#username').on('input', function(e){
     e.preventDefault();
     checkName();
@@ -51,6 +52,8 @@ function checkPassword() {
 }
 
 
+=======
+>>>>>>> daniel
 function checkInputs() {
     // trim to remove the whitespaces
     const usernameValue = username.value.trim();
@@ -93,4 +96,8 @@ floating_btn.addEventListener('click', () => {
 
 close_btn.addEventListener('click', () => {
     social_panel_container.classList.remove('visible')
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> daniel
