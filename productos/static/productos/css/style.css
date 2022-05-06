@@ -19,7 +19,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/img/bg.jpg');
+    background: url("../img/bg.jpg");
     background-size: cover;
 }
 
@@ -243,7 +243,7 @@ section {
 }
 
 .testimonials {
-    background: url(/img/bg2.jpg);
+    background: url("../img/bg2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -424,14 +424,14 @@ section {
 .registro {
     width: 100%;
     min-height: 100vh;
-    background: url(/img/bg4.jpg);
+    background: url('../img/bg4.jpg');
     background-size: cover;
 }
 
 .inicioSesion {
     width: 100%;
     min-height: 100vh;
-    background: url(/img/bg4.jpg);
+    background: url('../img/bg4.jpg');
     background-size: cover;
 }
 
@@ -614,7 +614,7 @@ section {
 }
 
 .carta {
-    background: url(/img/bg4.jpg );
+    background: url(../img/bg4.jpg);
     background-size: cover;
     width: 100%;
     min-height: 100vh;
@@ -685,14 +685,14 @@ section {
         position: relative;
         width: 40px;
         height: 40px;
-        background: url('/img/menu.png');
+        background: url('../img/menu.png');
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
     }
     .menuToggle.active {
-        background: url(/img/x.png);
+        background: url('../img/x.png');
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;

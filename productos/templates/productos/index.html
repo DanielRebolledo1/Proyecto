@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>donFood.</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="{%static 'productos/css/style.css'%}">
 </head>
 
 <body>
@@ -21,7 +23,7 @@
             <li><a href="#expert" onclick="toggleMenu();">Expertos</a></li>
             <li><a href="#testimonials" onclick="toggleMenu();">Testimonios</a></li>
             <li><a href="#contact" onclick="toggleMenu();">Contacto</a></li>
-            <li><a href="/formInicioSesion.html" onclick="toggleMenu();">Inicio de Sesión</a></li>
+            <li><a href="{% url 'formInicio'%}" onclick="toggleMenu();">Inicio de Sesión</a></li>
         </ul>
     </header>
     <!-- Banner -->
@@ -44,7 +46,7 @@
             </div>
             <div class="col50">
                 <div class="imgBx">
-                    <img src="img/pexels-kristina-paukshtite-1146760.jpg" alt="background">
+                    <img src="{% static 'productos/img/pexels-kristina-paukshtite-1146760.jpg' %}" alt="background">
                 </div>
             </div>
         </div>
@@ -58,7 +60,7 @@
         <div class="content">
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="menu1">
+                    <img src="{% static 'productos/img/menu1.jpg' %}" alt="menu1">
                 </div>
                 <div class="text">
                     <h3>Ensalada</h3>
@@ -66,7 +68,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu2.jpg" alt="menu2">
+                    <img src="{% static 'productos/img/menu2.jpg' %}" alt="menu2">
                 </div>
                 <div class="text">
                     <h3>Sopa</h3>
@@ -74,7 +76,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu3.jpg" alt="menu3">
+                    <img src="{% static 'productos/img/menu3.jpg' %}" alt="menu3">
                 </div>
                 <div class="text">
                     <h3>Pasta</h3>
@@ -82,7 +84,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu4.jpg" alt="menu4">
+                    <img src="{% static 'productos/img/menu4.jpg' %}" alt="menu4">
                 </div>
                 <div class="text">
                     <h3>Ensalada Especial</h3>
@@ -90,7 +92,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu5.jpg" alt="menu5">
+                    <img src="{% static 'productos/img/menu5.jpg' %}" alt="menu5">
                 </div>
                 <div class="text">
                     <h3>Sopa Especial</h3>
@@ -98,14 +100,14 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu6.jpg" alt="menu6">
+                    <img src="{% static 'productos/img/menu6.jpg' %}" alt="menu6">
                 </div>
                 <div class="text">
                     <h3>Pasta Especial</h3>
                 </div>
             </div>
             <div class="tittle">
-                <a href="carta.html" class="btn">Ver Todo</a>
+                <a href="{% url 'carta'%}" class="btn">Ver Todo</a>
             </div>
         </div>
         <!-- Expert -->
@@ -117,7 +119,7 @@
             <div class="content">
                 <div class="box">
                     <div class="imgBx">
-                        <img src="img/chef1.jpg" alt="chef1">
+                        <img src="{% static 'productos/img/chef1.jpg' %}" alt="chef1">
                     </div>
                     <div class="text">
                         <h3>Joaquin Ortiz</h3>
@@ -125,7 +127,7 @@
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <img src="img/chef2.jpg" alt="chef2">
+                        <img src="{% static 'productos/img/chef2.jpg' %}" alt="chef2">
                     </div>
                     <div class="text">
                         <h3>Sebastian Romero</h3>
@@ -133,7 +135,7 @@
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <img src="img/chef3.jpg" alt="chef3">
+                        <img src="{% static 'productos/img/chef3.jpg' %}" alt="chef3">
                     </div>
                     <div class="text">
                         <h3>Ignacio Figueroa</h3>
@@ -141,7 +143,7 @@
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <img src="img/chef4.jpg" alt="chef4">
+                        <img src="{% static 'productos/img/chef4.jpg' %}" alt="chef4">
                     </div>
                     <div class="text">
                         <h3>Joaquin Reyes</h3>
@@ -159,7 +161,7 @@
         <div class="content">
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/testi1.jpg" alt="testi1">
+                    <img src="{% static 'productos/img/testi1.jpg' %}" alt="testi1">
                 </div>
                 <div class="text">
                     <p>Excelente restaurante. Platos deliciosos. Terraza ideal para esta pandemia, cumplen con protocolos. Todo limpio. Cuenta con estacionamiento en su interior. Volveremos!</p>
@@ -168,7 +170,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/testi2.jpg" alt="testi2">
+                    <img src="{% static 'productos/img/testi2.jpg' %}" alt="testi2">
                 </div>
                 <div class="text">
                     <p>Segunda vez que lo visito y me parece un muy buen restaurante. Buen servicio y comida muy rica.</p>
@@ -177,7 +179,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/testi3.jpg" alt="testi3">
+                    <img src="{% static 'productos/img/testi3.jpg' %}" alt="testi3">
                 </div>
                 <div class="text">
                     <p>Disfrutar en un ambiente relajado y distendido de una oferta de productos de calidad, bien elaborados y perfectamente servidos.</p>
@@ -186,7 +188,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/testi4.jpg" alt="testi4">
+                    <img src="{% static 'productos/img/testi4.jpg' %}" alt="testi4">
                 </div>
                 <div class="text">
                     <p>Comida muy rica y buena atención. Probé algunos platos quede satisfecha... Por mi, habría probado toda la carta!</p>
@@ -253,7 +255,7 @@
         <p>copyright 2022 <a href="#">donFood</a>. All rights reserved </p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/main.js"></script>
+    <script src="{% static 'productos/js/main.js' %}"></script>
 </body>
 
 </html>

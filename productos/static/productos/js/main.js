@@ -12,7 +12,7 @@ function toggleMenu() {
 }
 
 
-$.get("api.json",
+$.get("/static/productos/api/api.json",
     function(data) {
         //console.log(data);
         $.each(data.categories, function(i, item) {
