@@ -12,6 +12,7 @@ function toggleMenu() {
 }
 
 
+/*
 $.get("/static/productos/api/api.json",
     function(data) {
         //console.log(data);
@@ -21,6 +22,7 @@ $.get("/static/productos/api/api.json",
                 item.strCategoryDescription + "</td></tr>");
         });
     });
+*/
 
 
 //Formulario de contacto
