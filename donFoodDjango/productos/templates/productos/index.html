@@ -1,0 +1,262 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>donFood.</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{%static 'productos/css/style.css'%}">
+</head>
+
+<body>
+    <!-- Navegation -->
+    <header class="sticky">
+        <a href="#" class="logo">donFood<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu();">Inicio</a></li>
+            <li><a href="#about" onclick="toggleMenu();">Acerca de Nosotros</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu();">Expertos</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu();">Testimonios</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contacto</a></li>
+            <li><a href="{% url 'formInicio'%}" onclick="toggleMenu();">Inicio de Sesión</a></li>
+        </ul>
+    </header>
+    <!-- Banner -->
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Elige Siempre</h2>
+            <p>Excelentes platos preparados por excelenstes chefs, tenemos una variedad de platos disponibles para tu elección.</p>
+            <a href="#menu" class="btn">Nuestro Menu</a>
+        </div>
+    </section>
+    <!--About -->
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="tittleText"><span>A</span>cerca de Nosotros</h2>
+                <p>Somos un restaurant que buscaba ser distinto a lo que entonces se conocía en Chile: nada muy elegante, pero cuidadosamente decorado, especial cuidado en la música y un ambiente acogedor. Pero eso no es lo unico que nos caracteriza, la
+                    gran estrella aquí es la comida. <br><br> Es por eso que te invitamos a disfrutar de nuestro servicio, brindandote una experiencia única con nuestra comida de primera y nuestros Chefs altamente capacitados.
+
+                </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/pexels-kristina-paukshtite-1146760.jpg' %}" alt="background">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <div class="tittle">
+            <h2 class="tittleText">Nuestro <span>M</span>enu</h2>
+            <p>Cada plato tiene su encanto. Aqui estan las especialidades de la casa, los platos especiales cuentan con una personalización de este, pudiendo agregarle ingredientes especiales a tu plato</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/menu1.jpg' %}" alt="menu1">
+                </div>
+                <div class="text">
+                    <h3>Ensalada</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/menu2.jpg' %}" alt="menu2">
+                </div>
+                <div class="text">
+                    <h3>Sopa</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/menu3.jpg' %}" alt="menu3">
+                </div>
+                <div class="text">
+                    <h3>Pasta</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/menu4.jpg' %}" alt="menu4">
+                </div>
+                <div class="text">
+                    <h3>Ensalada Especial</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/menu5.jpg' %}" alt="menu5">
+                </div>
+                <div class="text">
+                    <h3>Sopa Especial</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/menu6.jpg' %}" alt="menu6">
+                </div>
+                <div class="text">
+                    <h3>Pasta Especial</h3>
+                </div>
+            </div>
+            <div class="tittle">
+                <a href="{% url 'carta'%}" class="btn">Ver Todo</a>
+            </div>
+        </div>
+        <!-- Expert -->
+        <section class="expert" id="expert">
+            <div class="tittle">
+                <h2 class="tittleText">Nuestros <span>C</span>ocineros</h2>
+                <p>Cocineros de alto reconocimiento por su labor en nuestro restaurant, conocidos por su carimas y talento en el arte de la cocina.</p>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{% static 'productos/img/chef1.jpg' %}" alt="chef1">
+                    </div>
+                    <div class="text">
+                        <h3>Joaquin Ortiz</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{% static 'productos/img/chef2.jpg' %}" alt="chef2">
+                    </div>
+                    <div class="text">
+                        <h3>Sebastian Romero</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{% static 'productos/img/chef3.jpg' %}" alt="chef3">
+                    </div>
+                    <div class="text">
+                        <h3>Ignacio Figueroa</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{% static 'productos/img/chef4.jpg' %}" alt="chef4">
+                    </div>
+                    <div class="text">
+                        <h3>Joaquin Reyes</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="tittle white">
+            <h2 class="tittleText"><span>T</span>estimonios</h2>
+            <p>Testimonios y opiniones de celebridades que nos han visitado.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/testi1.jpg' %}" alt="testi1">
+                </div>
+                <div class="text">
+                    <p>Excelente restaurante. Platos deliciosos. Terraza ideal para esta pandemia, cumplen con protocolos. Todo limpio. Cuenta con estacionamiento en su interior. Volveremos!</p>
+                    <h3>Pedro Pascal</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/testi2.jpg' %}" alt="testi2">
+                </div>
+                <div class="text">
+                    <p>Segunda vez que lo visito y me parece un muy buen restaurante. Buen servicio y comida muy rica.</p>
+                    <h3>Agusto Schuster</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/testi3.jpg' %}" alt="testi3">
+                </div>
+                <div class="text">
+                    <p>Disfrutar en un ambiente relajado y distendido de una oferta de productos de calidad, bien elaborados y perfectamente servidos.</p>
+                    <h3>Diana Bolocco</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'productos/img/testi4.jpg' %}" alt="testi4">
+                </div>
+                <div class="text">
+                    <p>Comida muy rica y buena atención. Probé algunos platos quede satisfecha... Por mi, habría probado toda la carta!</p>
+                    <h3>Claudia Conserva</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <!--Implementar al borde en blanco las aplicaciones de contacto(gmail,whatsapp, facebook, etc.)-->
+    <section class="contact" id="contact">
+        <h2 class="tittleText"><span>C</span>ontáctanos</h2>
+        <p>Si tienes dudas o deseas mas información acerca de nuestros servicios e instalaciones, escribenos.</p>
+        <div class="container">
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="username">Nombre</label>
+                    <input type="text" placeholder="Nombre" id="username" autocomplete="off" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="ejemplo@email.com" id="email" autocomplete="off" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="comentario">Comentario</label>
+                    <textarea name="comentarios" rows="10" cols="40" placeholder="Comentarios" id="comentario"></textarea>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <button class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!-- SOCIAL PANEL HTML -->
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>Redes sociales</h4>
+            <ul>
+                <li>
+                    <a href="https://facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+                Redes sociales
+            </button>
+    <div class="copyrightText">
+        <p>copyright 2022 <a href="#">donFood</a>. All rights reserved </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'productos/js/main.js' %}"></script>
+</body>
+
+</html>
