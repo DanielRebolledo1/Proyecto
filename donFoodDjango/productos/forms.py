@@ -5,4 +5,4 @@ from .models import Comida
 class ComidaForm(ModelForm):
     class Meta:
         model = Comida
-        fields = ['id','nombre','descripcion','precio']
+        fields = ['id','nombre','imagen','descripcion','precio']

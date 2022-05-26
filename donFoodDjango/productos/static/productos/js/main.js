@@ -1,4 +1,6 @@
-window.addEventListener('scroll', function() {
+body = document.body;
+
+window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     header.classList.toggle("sticky", window.scrollY > 0);
 });
@@ -24,45 +26,71 @@ $.get("/static/productos/api/api.json",
     });
 */
 
+if (body.classList.contains('home')) {
+    $(document).ready(function () {
 
-//Formulario de contacto
-const form = document.getElementById('form');
-const usuario = document.getElementById('username');
-const email = document.getElementById('email');
-const comentario = document.getElementById('comentario');
+        //Formulario de contacto
+        const $form = $('#form');
+        const $username = $('#username');
+        const $email = $('#email');
+        const $comentario = $('#comentario');
 
+        $form.on('submit', function (e) {
+            e.preventDefault();
 
-$('#form').on('submit', function(e) {
-    e.preventDefault();
+            checkContactoInputs($username.get(0), $email.get(0), $comentario.get(0));
+        })
 
-    checkInputs();
-})
+        $username.on('input', function (e) {
+            e.preventDefault();
+            checkEmptyInput($username.get(0), 'Debe ingresar un nombre de usuario');
+        })
 
-$('#username').on('input', function(e) {
-    e.preventDefault();
-    checkName();
-})
+        $email.on('input', function (e) {
+            e.preventDefault();
+            checkEmail($email.get(0));
+        })
 
-$('#email').on('input', function(e) {
-    e.preventDefault();
-    checkEmail();
-})
+        $comentario.on('input', function (e) {
+            e.preventDefault();
+            checkEmptyInput($comentario.get(0), 'Debe ingresar un comentario');
+        })
+    });
+}
 
-$('#comentario').on('input', function(e) {
-    e.preventDefault();
-    checkComentario();
-})
+if (body.classList.contains('login')) {
+        //formulario Inicio sesion
+        const $form = $('#form');
+        const $username = $('#username');
+        const $password = $('#password');
 
-function checkName() {
-    const usuarioValue = usuario.value.trim();
-    if (usuarioValue === '') {
-        setErrorFor(usuario, 'Debe ingresar un nombre de usuario');
+    $form.on('submit', function (e) {
+        e.preventDefault();
+
+        checkLoginInputs($username.get(0),$password.get(0));
+    })
+
+    $username.on('input', function (e) {
+        e.preventDefault();
+        checkEmptyInput($username.get(0),'Debe ingresar un nombre de usuario');
+    });
+
+    $password.on('input', function (e) {
+        e.preventDefault();
+        checkEmptyInput($password.get(0),'Debe ingresar una contraseña');
+    });
+}
+
+function checkEmptyInput(input, errormsg) {
+    const inputValue = input.value.trim();
+    if (inputValue === '') {
+        setErrorFor(input, errormsg);
     } else {
-        setSuccessFor(usuario);
+        setSuccessFor(input);
     }
 }
 
-function checkEmail() {
+function checkEmail(email) {
     const emailValue = email.value.trim();
     if (emailValue === '') {
         setErrorFor(email, 'Debe ingresar un Email');
@@ -73,79 +101,16 @@ function checkEmail() {
     }
 }
 
-function checkComentario() {
-    const comentarioValue = comentario.value.trim();
-    if (comentarioValue === '') {
-        setErrorFor(comentario, 'Debe ingresar un comentario');
-    } else {
-        setSuccessFor(comentario);
-    }
+
+function checkContactoInputs(usuario, email, comentario) {
+    checkEmptyInput(usuario, 'Debe ingresar un nombre de usuario');
+    checkEmail(email);
+    checkEmptyInput(comentario, 'Debe ingresar un comentario');
 }
 
-
-email.addEventListener('input', () => {
-    checkEmail();
-});
-
-comentario.addEventListener('input', () => {
-    checkComentario();
-});
-
-function checkName() {
-    const usuarioValue = usuario.value.trim();
-    if (usuarioValue === '') {
-        setErrorFor(usuario, 'Debe ingresar un nombre de usuario');
-    } else {
-        setSuccessFor(usuario);
-    }
-}
-
-function checkEmail() {
-    const emailValue = email.value.trim();
-    if (emailValue === '') {
-        setErrorFor(email, 'Debe ingresar un Email');
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'No ingreso un email válido');
-    } else {
-        setSuccessFor(email);
-    }
-}
-
-function checkComentario() {
-    const comentarioValue = comentario.value.trim();
-    if (comentarioValue === '') {
-        setErrorFor(comentario, 'Debe ingresar un comentario');
-    } else {
-        setSuccessFor(comentario);
-    }
-}
-
-
-function checkInputs() {
-    // trim to remove the whitespaces
-    const usuarioValue = usuario.value.trim();
-    const emailValue = email.value.trim();
-    const comentarioValue = comentario.value.trim();
-
-    if (usuarioValue === '') {
-        setErrorFor(usuario, 'Debe ingresar un nombre de usuario');
-    } else {
-        setSuccessFor(usuario);
-    }
-
-    if (emailValue === '') {
-        setErrorFor(email, 'Debe ingresar un Email');
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'No ingreso un email válido');
-    } else {
-        setSuccessFor(email);
-    }
-
-    if (comentarioValue === '') {
-        setErrorFor(comentario, 'Debe ingresar un comentario');
-    } else {
-        setSuccessFor(comentario);
-    }
+function checkLoginInputs(usuario, password) {
+    checkEmptyInput(usuario, 'Debe ingresar un nombre de usuario');
+    checkEmptyInput(password, 'Debe ingresar una contraseña');
 }
 
 function setErrorFor(input, message) {

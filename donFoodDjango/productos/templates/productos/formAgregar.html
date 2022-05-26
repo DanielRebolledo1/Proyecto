@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administar</title>
+    <link rel="stylesheet" href="{% static 'productos/css/style.css' %}">
+</head>
+<body>
+<!-- Navegation -->
+<header class="sticky">
+    <a href="#" class="logo">donFood<span>.</span></a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navigation">
+        <li><a href="{% url 'home' %}#banner" onclick="toggleMenu();">Inicio</a></li>
+        <li><a href="{% url 'home' %}#about" onclick="toggleMenu();">Acerca de Nosotros</a></li>
+        <li><a href="{% url 'carta'%}" onclick="toggleMenu();">Menu</a></li>
+        <li><a href="{% url 'home' %}#expert" onclick="toggleMenu();">Expertos</a></li>
+        <li><a href="{% url 'home' %}#testimonials" onclick="toggleMenu();">Testimonios</a></li>
+        <li><a href="{% url 'home' %}#contact" onclick="toggleMenu();">Contacto</a></li>
+        <li><a href="{% url 'formInicio' %}" onclick="toggleMenu();">Inicio de Sesión</a></li>
+        <li><a href="{% url 'administrar' %}" onclick="toggleMenu();">Administrar</a></li>
+    </ul>
+</header>
+<section class="administrar">
+    <h2 class="tittleText"><span>A</span>gregar plato</h2>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data" action="" id="formulario" class="form">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-control">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn" id="enviar">Enviar</button>
+            <button type="reset" class="btn" id="limpiar">Limpiar</button>
+        </form>
+    </div>
+    <div id="error">{{ mensaje }}</div>
+</section>
+<script src="{% static 'productos/js/main.js' %}"></script>
+</body>
+</html>

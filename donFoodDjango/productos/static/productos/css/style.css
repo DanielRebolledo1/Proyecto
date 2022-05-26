@@ -435,6 +435,13 @@ section {
     background-size: cover;
 }
 
+.administrar{
+    width: 100%;
+    min-height: 100vh;
+    background: url('../img/bg4.jpg');
+    background-size: cover;
+}
+
 .container {
     background-color: #fff;
     border-radius: 5px;
@@ -652,6 +659,14 @@ section {
 
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid #ff0157;
+}
+
+.table-img{
+    max-width: 150px;
+}
+
+.admin .btn:hover{
+    letter-spacing: unset;
 }
 
 @media (max-width: 991px) {

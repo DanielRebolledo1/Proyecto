@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{%static 'productos/css/style.css'%}">
 </head>
 
-<body>
+<body class="home">
     <!-- Navegation -->
     <header class="sticky">
         <a href="#" class="logo">donFood<span>.</span></a>
@@ -20,11 +20,12 @@
         <ul class="navigation">
             <li><a href="#banner" onclick="toggleMenu();">Inicio</a></li>
             <li><a href="#about" onclick="toggleMenu();">Acerca de Nosotros</a></li>
-            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="{% url 'carta'%}" onclick="toggleMenu();">Menu</a></li>
             <li><a href="#expert" onclick="toggleMenu();">Expertos</a></li>
             <li><a href="#testimonials" onclick="toggleMenu();">Testimonios</a></li>
             <li><a href="#contact" onclick="toggleMenu();">Contacto</a></li>
             <li><a href="{% url 'formInicio'%}" onclick="toggleMenu();">Inicio de Sesión</a></li>
+            <li><a href="{% url 'administrar' %}" onclick="toggleMenu();">Administrar</a></li>
         </ul>
     </header>
     <!-- Banner -->
