@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'productos',
+    'rest_cocinero',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
