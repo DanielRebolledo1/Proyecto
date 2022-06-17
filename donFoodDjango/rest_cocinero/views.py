@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from productos.models import Cocinero
 from rest_cocinero.serializers import CocineroSerializer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 @csrf_exempt
 @api_view(['GET','POST'])
+@permission_classes((IsAuthenticated,))
 def lista_cocineros(request):
     if request.method == 'GET':
         lista_cocineros = Cocinero.objects.all()
@@ -27,6 +30,7 @@ def lista_cocineros(request):
 
 @csrf_exempt
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes((IsAuthenticated,))
 def modificar_cocineros(request, id):
     try:
         cocinero = Cocinero.objects.get(rut=id)
