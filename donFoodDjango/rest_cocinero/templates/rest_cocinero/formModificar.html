@@ -5,10 +5,10 @@
 <head>
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administar</title>
+    <title>Modificar</title>
     <link rel="stylesheet" href="{% static 'productos/css/style.css' %}">
 </head>
-<body>
+<body class="modificar_cocineros">
 <!-- Navegation -->
 <header class="sticky">
     <a href="#" class="logo">donFood<span>.</span></a>
@@ -31,7 +31,7 @@
     </ul>
 </header>
 <section class="administrar">
-    <h2 class="tittleText"><span>A</span>gregar plato</h2>
+    <h2 class="tittleText"><span>M</span>odificar Cocinero</h2>
     <div class="container">
         <form method="post" enctype="multipart/form-data" action="" id="formulario" class="form">
             {% csrf_token %}
@@ -44,12 +44,12 @@
                     <small>Error message</small>
                 </div>
             {% endfor %}
-            <button type="submit" class="btn" id="enviar">Enviar</button>
-            <button type="reset" class="btn" id="limpiar">Limpiar</button>
+            <button type="submit" class="btn" id="enviar">Modificar</button>
         </form>
-    </div>
     <div id="error">{{ mensaje }}</div>
+    </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{% static 'productos/js/main.js' %}"></script>
 </body>
 </html>

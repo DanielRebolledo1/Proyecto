@@ -24,8 +24,14 @@
             <li><a href="{% url 'home'%}#expert" onclick="toggleMenu();">Expertos</a></li>
             <li><a href="{% url 'home'%}#testimonials" onclick="toggleMenu();">Testimonios</a></li>
             <li><a href="{% url 'home'%}#contact" onclick="toggleMenu();">Contacto</a></li>
-            <li><a href="{% url 'formInicio'%}" onclick="toggleMenu();">Inicio de Sesión</a></li>
-            <li><a href="{% url 'administrar' %}" onclick="toggleMenu();">Administrar</a></li>
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <li><a href="{% url 'administrar' %}" onclick="toggleMenu();">Administrar</a></li>
+            {% endif %}
+            <li><a href="{% url 'logout' %}" onclick="toggleMenu();">Cerrar Sesion</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}" onclick="toggleMenu();">Inicio de Sesión</a></li>
+        {% endif %}
         </ul>
     </header>
     <!--section class="carta " id="carta ">

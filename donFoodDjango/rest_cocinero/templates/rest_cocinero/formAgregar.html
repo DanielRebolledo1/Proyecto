@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <title>Administar</title>
     <link rel="stylesheet" href="{% static 'productos/css/style.css' %}">
 </head>
-<body>
+<body class="agregarCocinero">
 <!-- Navegation -->
 <header class="sticky">
     <a href="#" class="logo">donFood<span>.</span></a>
@@ -31,7 +30,7 @@
     </ul>
 </header>
 <section class="administrar">
-    <h2 class="tittleText"><span>A</span>gregar plato</h2>
+    <h2 class="tittleText"><span>A</span>gregar Cocinero</h2>
     <div class="container">
         <form method="post" enctype="multipart/form-data" action="" id="formulario" class="form">
             {% csrf_token %}
@@ -50,6 +49,7 @@
     </div>
     <div id="error">{{ mensaje }}</div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{% static 'productos/js/main.js' %}"></script>
 </body>
 </html>

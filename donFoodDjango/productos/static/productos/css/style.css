@@ -51,6 +51,32 @@ p {
     transition: 0.5s;
 }
 
+.form a.btn-round{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background: #ff0157;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+.centroG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form a.btn-round:hover {
+    border-color: #fff;
+    box-shadow: 0 9px 12px -9px #ff0157;
+    letter-spacing: 6px;
+}
+
+
 .btn:hover {
     letter-spacing: 6px;
 }

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -8,6 +8,7 @@ from productos.models import Cocinero
 from rest_cocinero.serializers import CocineroSerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from .forms import CocineroForm
 
 # Create your views here.
 @csrf_exempt
@@ -19,8 +20,8 @@ def lista_cocineros(request):
         serializer = CocineroSerializer(lista_cocineros, many= True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        dataP = JSONParser().parse(request)
-        serializer = CocineroSerializer(data=dataP)
+        #dataP = JSONParser().parse(request)
+        serializer = CocineroSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status= status.HTTP_201_CREATED)
@@ -41,8 +42,8 @@ def modificar_cocineros(request, id):
         serializer = CocineroSerializer(cocinero)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        dataParse = JSONParser().parse(request)
-        serializer = CocineroSerializer(cocinero, data=dataParse)
+        #dataParse = JSONParser().parse(request)
+        serializer = CocineroSerializer(cocinero, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -51,3 +52,20 @@ def modificar_cocineros(request, id):
     elif request.method == 'DELETE':
         cocinero.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+def ListadoCocinero(request):
+    return render(request, 'rest_cocinero/cocineros.html')
+
+def AgregarCocinero(request):
+    datos = {
+        'form': CocineroForm(),
+    }
+    return render(request, 'rest_cocinero/formAgregar.html', datos)
+
+def ModificarCocinero(request, id):
+    cocinero = Cocinero.objects.get(rut=id)
+
+    datos = {
+        'form': CocineroForm(instance=cocinero)
+    }
+    return render(request, 'rest_cocinero/formModificar.html', datos)

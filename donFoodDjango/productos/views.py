@@ -7,12 +7,6 @@ from .forms import ComidaForm
 def home(request):
     return render(request, 'productos/index.html')
 
-def formRegistro(request):
-    return render(request, 'productos/formRegistro.html')
-
-def formInicio(request):
-    return render(request, 'productos/formInicioSesion.html')
-
 def administrar(request):
     lista_comida = Comida.objects.all()
     datos={

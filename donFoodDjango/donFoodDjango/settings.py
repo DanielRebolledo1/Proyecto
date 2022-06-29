@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'productos',
     'rest_cocinero',
     'rest_framework',
     'rest_framework.authtoken',
+    'login',
+    'social_django',
 ]
 
 REST_FRAMEWORK = {
@@ -48,6 +51,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.google.GoogleOAuth2',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,3 +139,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SITE_ID = 2
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '667718317710-c7uku967bnav742jpkelpbbf89r2mu2h.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['email']

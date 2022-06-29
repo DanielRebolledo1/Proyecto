@@ -1,15 +1,6 @@
 from django.db import models
 
 
-class Usuario(models.Model):
-    id = models.AutoField(primary_key=True, verbose_name='Id')
-    email = models.CharField(max_length=100, unique=True, verbose_name='Email')
-    usuario = models.CharField(max_length=100, unique=True, verbose_name='Usuario')
-    contrasena = models.CharField(max_length=100, verbose_name='Contraseña')
-
-    def __str__(self):
-        return self.usuario
-
 
 class Cocinero(models.Model):
     rut = models.IntegerField(primary_key=True, verbose_name='RUT')
@@ -20,7 +11,7 @@ class Cocinero(models.Model):
     contacto = models.IntegerField(verbose_name='Contacto')
 
     def __str__(self):
-        return self.rut
+        return self.nombre
 
 
 class Comida(models.Model):
