@@ -31,6 +31,8 @@ $('#form').on('submit', function (e) {
                     if (error === 'username') {
                         setErrorFor($('#id_username').get(0), 'Usuario ya registrado');
                     }
+                }else{
+                    window.location = JSON.parse(JSON.stringify(response.url));
                 }
             },
         });

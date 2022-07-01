@@ -48,7 +48,7 @@ def register(request):
             user = form.save(commit=False)
             user.password = make_password(user.password)
             user.save()
-            return redirect('login')
+            return JsonResponse({'url': '/login/'})
         else:
             return JsonResponse({'success': False, 'error': 'username'})
     return render(request, "login/formRegistro.html", datos)

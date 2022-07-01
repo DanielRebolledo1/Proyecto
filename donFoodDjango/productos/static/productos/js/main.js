@@ -112,6 +112,7 @@ if (body.classList.contains('agregarCocinero')) {
             headers: {'X-CSRFToken': csrftoken, 'Authorization': 'Token ' + sessiontoken},
             data: $form.serialize(),
             success: function (response) {
+                window.location = '/api/listar_cocinero/';
             },
         });
     })
@@ -141,6 +142,7 @@ if (body.classList.contains('listadoCocineros')) {
                         type: 'DELETE',
                         headers: {'X-CSRFToken': csrftoken, 'Authorization': 'Token ' + sessiontoken},
                         success: function (response) {
+                            window.location.reload();
                         },
                     });
                 });
@@ -164,6 +166,7 @@ if (body.classList.contains('modificar_cocineros')) {
             headers: {'X-CSRFToken': csrftoken, 'Authorization': 'Token ' + sessiontoken},
             data: $form.serialize(),
             success: function (response) {
+                window.location = '/api/listar_cocinero/';
             },
         });
     })
