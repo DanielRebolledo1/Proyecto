@@ -46,6 +46,7 @@ def registrarVenta(request):
     }
     if request.method == 'POST':
         formulario = pedidoForm(data=request.POST)
+        formulario.usuario = request.user
 
         if formulario.is_valid():
             formulario.save()

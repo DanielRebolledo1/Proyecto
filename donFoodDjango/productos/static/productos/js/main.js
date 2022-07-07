@@ -14,7 +14,6 @@ function toggleMenu() {
 }
 
 if (body.classList.contains('carta')){
-        socialPanel();
 
 }
 
