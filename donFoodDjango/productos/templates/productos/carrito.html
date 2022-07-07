@@ -46,7 +46,9 @@
 </div>
 <div class="row text-center">
     <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a></div>
-    <div class="col-6"><a href="{% url 'procesar_compra' %}" class="btn btn-success">Guardar</a></div>
+    <form action="" method="post">
+        <div class="col-6"><a href="{% url 'procesar_compra' %}" class="btn btn-success">Guardar</a></div>
+    </form>
 </div>
 </body>
 </html>

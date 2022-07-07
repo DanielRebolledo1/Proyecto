@@ -38,7 +38,6 @@ class Bebida(models.Model):
 class Pedido(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name="pedido")
     comidas = models.ManyToManyField(Comida)
-    bebidas = models.ManyToManyField(Bebida)
     total = models.IntegerField(verbose_name='Precio')
 
     def __str__(self) -> str:

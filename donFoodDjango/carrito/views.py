@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 
 
 from carrito.carrito import Carrito
+from productos.forms import pedidoForm
 from productos.models import Comida
 
 
@@ -39,3 +40,17 @@ def procesar_compra(request):
     return redirect("carta")
 
 
+def registrarVenta(request):
+    data = {
+        'form': pedidoForm()
+    }
+    if request.method == 'POST':
+        formulario = pedidoForm(data=request.POST)
+
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, "Registro agregado correctamente")
+            return redirect(to="carta")
+        else:
+            data["form"] = formulario
+    return render(request, 'productos/carta.html', data)
