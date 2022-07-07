@@ -13,6 +13,10 @@ function toggleMenu() {
     navigation.classList.toggle('active');
 }
 
+if (body.classList.contains('carta')){
+        socialPanel();
+
+}
 
 /*
 $.get("/static/productos/api/api.json",
@@ -237,7 +241,6 @@ function socialPanel() {// SOCIAL PANEL JS
         social_panel_container.classList.remove('visible')
     });
 }
-
 
 function getCookie(name) {
     let cookieValue = null;

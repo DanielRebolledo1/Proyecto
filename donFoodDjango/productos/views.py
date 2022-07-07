@@ -1,25 +1,30 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Comida
 from .forms import ComidaForm
+
 
 # Create your views here.
 
 def home(request):
     return render(request, 'productos/index.html')
 
+
 def administrar(request):
     lista_comida = Comida.objects.all()
-    datos={
+    datos = {
         'comida': lista_comida
     }
     return render(request, 'productos/administrar.html', datos)
 
+
 def carta(request):
     lista_comida = Comida.objects.all()
-    datos={
+    datos = {
         'comida': lista_comida
     }
     return render(request, 'productos/carta.html', datos)
+
 
 def form_agregar(request):
     datos = {
@@ -32,7 +37,8 @@ def form_agregar(request):
             datos['mensaje'] = 'Guardado correctamente'
         else:
             datos['mensaje'] = form.errors
-    return render(request,'productos/formAgregar.html',datos)
+    return render(request, 'productos/formAgregar.html', datos)
+
 
 def form_mod(request, id):
     comida = Comida.objects.get(id=id)
@@ -47,9 +53,10 @@ def form_mod(request, id):
             datos['mensaje'] = 'Guardado correctamente'
         else:
             datos['mensaje'] = form.errors
-    return render(request, 'productos/formModificar.html',datos)
+    return render(request, 'productos/formModificar.html', datos)
 
-def form_del (request, id):
+
+def form_del(request, id):
     comida = Comida.objects.get(id=id)
     comida.delete()
-    return redirect(to='home')
+    return redirect(to='administrar')

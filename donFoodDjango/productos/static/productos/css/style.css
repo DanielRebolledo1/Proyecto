@@ -51,6 +51,18 @@ p {
     transition: 0.5s;
 }
 
+.btna{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
 .form a.btn-round{
     border-radius: 50%;
     height: 50px;
